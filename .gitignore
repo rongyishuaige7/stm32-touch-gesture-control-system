@@ -1,0 +1,27 @@
+# PlatformIO / embedded build output
+.pio/
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.a
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary and local-only files
+*.log
+*.tmp
+*.swp
+*~

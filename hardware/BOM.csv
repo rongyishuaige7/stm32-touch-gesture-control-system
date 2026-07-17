@@ -1,0 +1,11 @@
+reference,quantity,part_or_module,role,status,notes
+U1,1,STM32F103C8T6 development board,main controller,source-confirmed,"PlatformIO target genericSTM32F103C8; exact board vendor and flash pending"
+U2,1,ESP-01S,SoftAP and HTTP AT modem,source-confirmed,"3.3 V only; exact AT firmware and supply pending hardware confirmation"
+U3,1,APDS-9960 module,air gesture sensor,source-confirmed,"I2C1 PB6/PB7; module regulator and pull-ups pending"
+S1-S4,4,TTP223 capacitive touch modules,touch input,source-confirmed,"PA0-PA3; exact module polarity pad configuration pending"
+LED1-LED2,2,LED with current-limiting resistor,PWM output,source-confirmed,"PA6/PA7 TIM3; color and resistor value pending"
+LED3-LED4,2,LED with current-limiting resistor,switch output,source-confirmed,"PB0/PB1; color and resistor value pending"
+R1-R4,4,TBD resistor,LED current limiting,hardware-pending,"Confirm actual resistance and LED forward voltage"
+PS1,1,regulated 3.3 V supply,logic and ESP supply,document-confirmed,"Must support ESP-01S Wi-Fi transient current"
+DBG1,1,ST-Link programmer/debugger,flash and debug tool,document-confirmed,"Uses SWD; not part of the running prototype"
+MISC,1,common ground and wiring,interconnect,document-confirmed,"All modules must share a reference; verify voltage domains first"

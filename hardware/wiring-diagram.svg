@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">STM32 触摸与隔空手势控制系统接线边界图</title>
+  <desc id="desc">根据源码整理的接线边界。TTP223 连接 PA0 到 PA3，APDS-9960 连接 PB6 和 PB7，ESP-01S 连接 USART1 PA9 和 PA10，四路 LED 连接 PA6、PA7、PB0 和 PB1。当前硬件尚未重新真机复测。</desc>
+  <style>
+    :root{color-scheme:light dark}
+    .bg{fill:#fff}.core{fill:#fff8f1;stroke:#e87524;stroke-width:3}.module{fill:#f6f8fa;stroke:#59636e;stroke-width:2}
+    .pending{fill:#fff4d6;stroke:#b7791f;stroke-width:2;stroke-dasharray:9 7}.wire{stroke:#334155;stroke-width:3;fill:none}
+    .power{stroke:#d14343;stroke-width:3;fill:none}.title{font:700 24px ui-sans-serif,system-ui,sans-serif;fill:#18202a}
+    .text{font:18px ui-sans-serif,system-ui,sans-serif;fill:#334155}.note{font:600 17px ui-sans-serif,system-ui,sans-serif;fill:#9a3412}
+    @media (prefers-color-scheme:dark){.bg{fill:#0d1117}.core{fill:#21170f;stroke:#ff8a3d}.module{fill:#161b22;stroke:#8b949e}.pending{fill:#2a2112;stroke:#d29922}.wire{stroke:#c9d1d9}.power{stroke:#ff7b72}.title{fill:#f0f6fc}.text{fill:#c9d1d9}.note{fill:#ffa657}}
+  </style>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="title" x="50" y="50">STM32 触摸与隔空手势控制系统 · 接线边界图</text>
+  <text class="text" x="50" y="82">按当前源码整理；不是 PCB 原理图；当前提交尚未重新真机复测</text>
+
+  <rect class="core" x="430" y="160" width="340" height="420" rx="24"/>
+  <text class="title" x="505" y="210">STM32F103C8T6</text>
+  <text class="text" x="470" y="260">PA0–PA3 · TTP223 × 4</text>
+  <text class="text" x="470" y="310">PB6/PB7 · APDS-9960 I²C1</text>
+  <text class="text" x="470" y="360">PA6/PA7 · TIM3 PWM LED</text>
+  <text class="text" x="470" y="410">PB0/PB1 · Switch LED</text>
+  <text class="text" x="470" y="460">PA9/PA10 · ESP USART1</text>
+  <text class="text" x="470" y="510">PA13/PA14 · SWD</text>
+  <text class="text" x="470" y="550">HSI 8 MHz · common GND</text>
+
+  <rect class="pending" x="50" y="160" width="280" height="105" rx="14"/>
+  <text class="title" x="88" y="198">TTP223 × 4</text>
+  <text class="text" x="88" y="228">UP/L/R/D → PA0/1/2/3</text>
+  <text class="text" x="88" y="252">极性焊盘待实物确认</text>
+  <path class="wire" d="M330 212 H430"/>
+
+  <rect class="pending" x="50" y="315" width="280" height="105" rx="14"/>
+  <text class="title" x="88" y="353">APDS-9960</text>
+  <text class="text" x="88" y="383">SCL → PB6 · SDA → PB7</text>
+  <text class="text" x="88" y="407">供电/上拉待实物确认</text>
+  <path class="wire" d="M330 367 H430"/>
+
+  <rect class="module" x="50" y="470" width="280" height="95" rx="14"/>
+  <text class="title" x="88" y="508">ST-Link</text>
+  <text class="text" x="88" y="540">SWDIO PA13 · SWCLK PA14</text>
+  <path class="wire" d="M330 518 H430"/>
+
+  <rect class="pending" x="870" y="160" width="280" height="125" rx="14"/>
+  <text class="title" x="908" y="198">ESP-01S</text>
+  <text class="text" x="908" y="228">RX ← PA9 · TX → PA10</text>
+  <text class="text" x="908" y="252">稳定 3.3 V · 共地</text>
+  <text class="text" x="908" y="276">AT 固件版本待确认</text>
+  <path class="wire" d="M770 222 H870"/>
+
+  <rect class="pending" x="870" y="335" width="280" height="110" rx="14"/>
+  <text class="title" x="908" y="373">PWM LED × 2</text>
+  <text class="text" x="908" y="403">PA6 / PA7 · 各自限流</text>
+  <text class="text" x="908" y="429">电阻值待实物确认</text>
+  <path class="wire" d="M770 390 H870"/>
+
+  <rect class="pending" x="870" y="495" width="280" height="110" rx="14"/>
+  <text class="title" x="908" y="533">开关 LED × 2</text>
+  <text class="text" x="908" y="563">PB0 / PB1 · 各自限流</text>
+  <text class="text" x="908" y="589">不得直接接大电流负载</text>
+  <path class="wire" d="M770 550 H870"/>
+
+  <path class="power" d="M1010 285 V660 H600 V580"/>
+  <text class="note" x="50" y="680">虚线模块需先核实精确型号、供电、上拉、极性和限流；GPIO 不得直接控制市电或大电流家电负载。</text>
+  <text class="text" x="50" y="718">All modules must share a ground reference. Never apply 5 V directly to ESP-01S GPIO or an STM32 input.</text>
+</svg>
