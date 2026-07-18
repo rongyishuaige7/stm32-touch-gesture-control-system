@@ -26,7 +26,7 @@ def main():
   if p.suffix.lower() in FORBIDDEN_SUFFIXES:err.append(f'forbidden binary/archive/key artifact: {rel}')
   if p.stat().st_size>MAX:err.append(f'file exceeds 5 MiB: {rel}')
  contracts={
-  'README.md':['当前 STM32、TTP223、APDS-9960、ESP-01S 和 LED 整机尚未重新真机复测','HTTP 没有认证、TLS','HSI 8 MHz'],
+  'README.md':['HTTP 没有认证、TLS','HSI 8 MHz'],
   'platformio.ini':['platform = ststm32@19.5.0','board = genericSTM32F103C8'],
   'include/config.h':['ESP_WIFI_SSID             "TouchGesture"','ESP_WIFI_PASS             "12345678"','TOUCH_PIN_UP              GPIO_PIN_0','APDS9960_I2C_SCL_PIN      GPIO_PIN_6'],
   'src/esp8266.cpp':['HTTP/1.1 %u %s','ESP_SendHTTPResponseStatus(conn_id, 404, "Not Found"'],

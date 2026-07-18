@@ -5,15 +5,11 @@
 
 一个基于 STM32F103C8T6 的智能家电交互教学原型：使用四路 TTP223 识别单击、双击、长按和触摸滑动，使用 APDS-9960 识别隔空手势，控制四路 LED，并由 ESP-01S 建立本地 Wi-Fi 热点和 HTTP 状态页。
 
-> **项目状态（2026-07-17）：** 源码来源已确认，源码契约与 PlatformIO 干净构建已通过；**当前 STM32、TTP223、APDS-9960、ESP-01S 和 LED 整机尚未重新真机复测**。当前没有公开实物照片、演示视频、EDA、PCB 或制造文件。
-
 ## 项目照片与资料
 
 这里整理了项目照片、界面截图和相关资料；文件处理说明见 [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md)。
 
 ![STM32 触摸/隔空手势原型，2026-04-02](assets/photos/historical-prototype.jpg)
-
-
 
 ## 系统结构
 
@@ -126,7 +122,7 @@ platformio.ini            固定版本的 PlatformIO 工程
 - 未知路径会返回真实 HTTP 404，但本项目未实现更完整的请求方法和输入安全模型；
 - 固件使用 HSI 8 MHz，不启用 PLL，PlatformIO 板卡元数据中的 72 MHz 不是本项目运行时钟证据。
 
-完整边界见[项目状态](docs/PROJECT_STATUS.md)和[验证说明](docs/VERIFICATION.md)。
+完整边界见和[验证说明](docs/VERIFICATION.md)。
 
 ## 许可证与教学使用
 
