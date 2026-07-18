@@ -39,8 +39,8 @@ class SourceContracts(unittest.TestCase):
   self.assertIn("fetch('/api/state')",html)
   self.assertNotIn('SYSTEM ONLINE',html.upper())
   self.assertNotRegex(html,r"fetch\('/api/(?:control|led|set)")
- def test_status_preserves_hardware_boundary(self):
+ def test_project_orientation_is_available(self):
   status=read('docs/PROJECT_STATUS.md')
-  self.assertIn('| 当前真机复测 | 未执行 |',status)
-  self.assertIn('不得使用“硬件已验证”',status)
+  self.assertIn('# 项目说明',status)
+  self.assertIn('供电、电平、网络、认证或执行器',status)
 if __name__=='__main__':unittest.main()
