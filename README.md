@@ -7,6 +7,15 @@
 
 > **项目状态（2026-07-17）：** 源码来源已确认，源码契约与 PlatformIO 干净构建已通过；**当前 STM32、TTP223、APDS-9960、ESP-01S 和 LED 整机尚未重新真机复测**。当前没有公开实物照片、演示视频、EDA、PCB 或制造文件。
 
+## Historical material evidence (2026-07-18 publication)
+
+sanitized historical photo(s), historical EDA derivative(s). See [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md) for dates, sanitization, omissions, and evidence limits.
+
+![Historical STM32 touch/gesture prototype, 2026-04-02](assets/photos/historical-prototype.jpg)
+
+Historical media/EDA do not prove that the current public commit was flashed or re-tested on hardware. **Current hardware re-test not run.**
+
+
 ## 系统结构
 
 ```text

@@ -33,3 +33,9 @@ PlatformIO 干净构建已验证
 - 没有功耗、长稳、识别准确率和可靠性证据。
 
 在当前提交完成日期化实物复测以前，不得使用“硬件已验证”“识别准确”“生产就绪”“家电可用”或“系统在线”等标签。
+
+## Historical media and EDA added on 2026-07-18
+
+sanitized historical photo(s), historical EDA derivative(s). See [MEDIA_EVIDENCE](MEDIA_EVIDENCE.md) for dates, sanitization, omissions, and evidence limits.
+
+This publication update adds historical evidence only. Current hardware re-test not run.
