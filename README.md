@@ -5,7 +5,7 @@
 
 一个基于 STM32F103C8T6 的智能家电交互教学原型：使用四路 TTP223 识别单击、双击、长按和触摸滑动，使用 APDS-9960 识别隔空手势，控制四路 LED，并由 ESP-01S 建立本地 Wi-Fi 热点和 HTTP 状态页。
 
-## 项目照片与资料
+## 项目资料
 
 这里整理了项目照片、界面截图和相关资料；文件处理说明见 [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md)。
 
@@ -98,7 +98,7 @@ pio run
 pio run -t upload
 ```
 
-CI Artifact 仅保留 14 天，是构建证据，不是已经在某块硬件上验证过的产品固件。
+CI Artifact 用于保留构建记录，保留期为 14 天。
 
 ## 目录
 
@@ -112,7 +112,7 @@ docs/                    来源、协议、状态、验证和元数据
 platformio.ini            固定版本的 PlatformIO 工程
 ```
 
-## 当前公开范围与限制
+## 注意事项
 
 - 当前只证明源码结构、关键契约和固定环境构建；没有证明烧录、触摸可靠性、APDS 识别率、ESP AT 固件兼容性或 HTTP 运行；
 - 没有当前实物照片、演示视频、EDA、PCB、Gerber 或制造文件；
@@ -121,8 +121,6 @@ platformio.ini            固定版本的 PlatformIO 工程
 - 内置 Web 页面是状态观察入口，不是远程控制接口；
 - 未知路径会返回真实 HTTP 404，但本项目未实现更完整的请求方法和输入安全模型；
 - 固件使用 HSI 8 MHz，不启用 PLL，PlatformIO 板卡元数据中的 72 MHz 不是本项目运行时钟证据。
-
-完整边界见和[验证说明](docs/VERIFICATION.md)。
 
 ## 许可证与教学使用
 
