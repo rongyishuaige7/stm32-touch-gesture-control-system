@@ -5,8 +5,8 @@
 ## 只读来源
 
 ```text
-/home/rongyi/桌面/stm32-touch-gesture-pio
-/mnt/shared/2026项目/stm32-touch-gesture-pio.zip
+~/桌面/stm32-touch-gesture-pio
+source-archives/2026项目/stm32-touch-gesture-pio.zip
 ```
 
 历史 ZIP SHA-256：
@@ -39,7 +39,7 @@ a637103fda2aaf1171651d96a4cebc5af42cedd160680ade3857c10045dd0fca
 公开候选目录：
 
 ```text
-/home/rongyi/桌面/stm32-touch-gesture-control-system
+~/桌面/stm32-touch-gesture-control-system
 ```
 
 在不反向修改来源目录的前提下完成：
